@@ -1,0 +1,29 @@
+.PrivacyPolicy_section {
+
+    border: 1px solid #e9ebec;
+    margin: 25px;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 10px;
+
+
+    .heading {
+        margin: 2em 0 1em;
+    }
+
+    .submit_btn {
+        margin: 1em 0;
+        button {
+            border: none;
+            font-size: 17px;
+            font-weight: 500;
+            background: #EE5D6D;
+            box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.5);
+            padding: 0.5em 2.5em;
+            color: #fff;
+            border-radius: 25px;
+            transition: all 0.2s;
+            outline: none;
+        }
+    }
+}

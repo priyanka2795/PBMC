@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import "./common/sidebar.scss";
+@import "./common/header.scss";
+@import "./auth/login.scss";
+@import "./auth/profile.scss";
+
+@import "./admin/business_details/business_details.scss";
+@import "./admin/invoice_overview/invoice_overview.scss";
+@import "./_notFound";
+@import "./admin/history/history.scss";
+@import "./admin/MainDashboard/_maindashboard";
+@import "./admin/MainDashboard/admindashboard.scss";
+
+
+@import "./admin/invoice_submission/invoice_submission.scss";
+@import "./admin/invoice_details/invoice_details.scss";
+@import "./admin/funding/funding.scss";
+@import "./admin/liquidity_pool/mainliquidity.scss";
+@import "./admin/lending_facility/mainlending_facility.scss";
+@import "./admin/lending_facility/getLoan.scss";
+
+@import "./admin/settings/settings.scss";
+@import "./admin/settings/notifications.scss";
+@import "./admin/account/mainAccount.scss";
+@import "./admin/stacking/mainStaking.scss";
+
+@import "./landing/mainLanding.scss";
+
+@import "./admin/kyc_request/kyc_request.scss";
+@import "./admin/p2p_exchange/p2p_exchange.scss";
+
+@import "./landing/termConditions.scss";
+@import "./admin/CMS/_privacyPolicy";
+
+@import "./admin/marketplace/_marketplace";
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #EDEDED !important;
+    // background-color: #f8f9fe !important;
+}
+
+.main_content {
+    margin-left: 250px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.primary_btn {
+    // background: #6173e0;
+    // color: #fff;
+    border: none;
+    width: 46%;
+    // padding: 8px 6px;
+    font-size: 17px;
+    font-weight: 500;
+    // border-radius: 5px;
+    // background-image: linear-gradient(#5e72e4, #3c53db);
+    background: #EE5D6D;
+    box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.5);
+    padding: 0.5em 2.5em;
+    color: #fff;
+    border-radius: 25px;
+    // box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s;
+    outline: none;
+
+    // &:hover {
+    //     box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
+    // }
+
+    &:focus {
+        outline: none;
+        border: none;
+    }
+
+    &:active {
+        outline: none;
+        border: none;
+    }
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 1025px) {
+    .main_content {
+        margin-left: 0;
+    }
+}
+
+
+.error_msg_class{
+    // color: red;
+    color: #f55757;
+    padding-left: 25px;
+}
+
+
+.loader {
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #101920;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.loader_wrap {
+   background-color: rgba(255, 255, 255, .4);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    // left: 0;
+    z-index: 999;
+    overflow-x: hidden;
+    overflow-y: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.loader_wrap::-webkit-scrollbar {
+    display: none;
+  }
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.lds-hourglass {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #fff;
+    border-color: #ee5d6d transparent #ee5d6d transparent;
+    animation: lds-hourglass 2s infinite;
+  }
+  @keyframes lds-hourglass {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }

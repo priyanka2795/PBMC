@@ -1,0 +1,45 @@
+.aboutTrade_section{
+    background: rgba(217, 217, 217, 0.04);
+    padding: 40px 0px;
+     .about_content{
+        .left_box{
+            color: #fff;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // margin-left: 18px;
+            .subtitle{
+                color:#FF465A;
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: 0.7rem;
+            }
+            .title{
+                font-size: 35px;
+                font-weight: 500;
+            }
+            .desc{
+                font-weight: 300;
+                font-size: 17px;
+                line-height: 2;
+            }
+            .link_btn{
+                padding-top: 10px;
+                 a{
+                    color: #fff;
+                    font-weight: 500;
+                    font-size: 22px;
+                 }
+            }
+        }
+        .about_img{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            img{
+                border-radius: 18px;
+            }
+        }
+     }
+}

@@ -1,0 +1,248 @@
+.login_section {
+    background-image: url("../../images/landing/login_bg.png") !important;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 100%;
+    background-color: #eceff5;
+    position: relative;
+    background-size: auto;
+    height: 100vh;
+   
+
+    .text_bg {
+        position: absolute;
+        height: 97vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 20px;
+
+        .text {
+            font-size: 175px;
+            font-weight: 800;
+            line-height: 1;
+            color: hsl(0deg 0% 0% / 2%);
+            z-index: 10;
+            -webkit-user-select: none;
+            /* Safari */
+            -ms-user-select: none;
+            /* IE 10 and IE 11 */
+            user-select: none;
+            /* Standard syntax */
+        }
+    }
+
+
+    .login_wrapper {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 60px;
+
+        .login_box {
+            width: 490px;
+            padding: 2.5em 2em;
+            border-radius: 17px;
+            box-shadow: -20px 25px 37px rgba(0, 0, 0, 0.08);
+            background-color: #fff;
+            z-index: 99;
+
+            .form-check {
+                input {
+                    cursor: pointer;
+                }
+
+                label {
+                    cursor: pointer;
+                }
+            }
+
+            .login_type_row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 1.5em;
+
+                .login_type {
+                    background: #F2F4F8;
+                    border: 1px solid #FFFFFF;
+                    border-radius: 50px;
+                    width: 120px;
+                    padding: 0.65em 0em;
+                    cursor: pointer;
+                    text-align: center;
+                    color: #6C757D;
+                    display: flex;
+                    gap: 6px;
+                    justify-content: center;
+                    align-items: center;
+
+                    .icon {
+                        background: #6C757D;
+                        width: 22px;
+                        height: 22px;
+                        border-radius: 50%;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                }
+
+                .user_type_width {
+                    width: 170px;
+
+                    @media (min-width:768px) and (max-width:1399px) {
+                        width: 140px;
+                    }
+                }
+
+                .active {
+                    background: #FAF3F4;
+                    border: 1.3px solid #EE5D6D;
+
+                    .icon {
+                        background-color: #EE5D6D;
+                    }
+
+                }
+
+            }
+
+
+
+            h2 {
+                text-align: center;
+                font-weight: 700;
+                font-size: 25px;
+            }
+
+            .form-control {
+                background: #F2F4F8;
+                border: 1px solid #FFFFFF;
+                border-radius: 50px;
+                padding: 0.828rem 1.5rem;
+
+                &:focus {
+                    box-shadow: none;
+                    border: 1.3px solid #EE5D6D;
+                }
+            }
+
+            button {
+                width: auto;
+            }
+
+            p {
+                a {
+                    color: #000;
+                    font-weight: 500;
+
+                    &:hover {
+                        text-decoration: underline !important;
+                    }
+                }
+            }
+
+            .account_err {
+                background: rgb(255 204 210 / 42%);
+                padding: 10px 15px;
+                border-radius: 5px;
+                border: 1px solid #ec949c96;
+                margin-bottom: 15px;
+
+                p {
+                    color: #c50315;
+                    margin-bottom: 0rem;
+                }
+            }
+
+            .success_message {
+                background: rgb(207 255 219 / 45%);
+                padding: 15px 15px;
+                border-radius: 5px;
+                border: 1px solid #9cbba29c;
+                margin-bottom: 15px;
+
+                p {
+                    color: #008628;
+                    margin-bottom: 0rem;
+                    font-size: 15px;
+                }
+            }
+
+            .forgot_pwd_link {
+                text-align: right;
+                cursor: pointer;
+
+                a {
+                    color: #535353 !important;
+
+                    &:hover {
+                        text-decoration: underline !important;
+                    }
+                }
+            }
+
+            .otp_btns {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .otp_title {
+                text-align: center;
+            }
+
+            .otp_subtitle {
+                text-align: center;
+                font-size: 15px;
+
+                span {
+                    font-weight: bold;
+                }
+            }
+
+            .resend_link {
+                text-align: center;
+                margin-top: 20px;
+
+                .resend_otp {
+                    color: #007bff;
+                    text-decoration: underline;
+                    padding-right: 5px;
+                    cursor: pointer;
+                }
+
+                .timer {
+                    color: #008800;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:991px) {
+    .login_section .text_bg {
+        display: none;
+    }
+
+    .login_section .login_wrapper {
+        margin-right: 0px;
+    }
+}
+
+@media (min-width:850px) and (max-width:1550px){
+    .login_section{
+        background-size: contain;
+    }
+    .login_section .text_bg .text {
+        font-size: 160px;
+    }
+}

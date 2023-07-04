@@ -1,0 +1,60 @@
+.landing_header_section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    .navbar {
+        background-color: transparent;
+        --bs-navbar-toggler-focus-width: 0rem;
+
+        .navbar-nav {
+            .nav-link {
+                padding: 0px 20px;
+                color: #fff;
+            }
+
+            .dashboard_link {
+                background-color: #FF465A;
+                box-shadow: 0px 0px 25px rgba(255, 70, 90, 0.66);
+                border-radius: 8px;
+                color: #fff;
+                border: none;
+                padding: 5px 25px;
+                font-size: 19px;
+                font-weight: 500;
+            }
+
+            .sign_in{
+                background-color: #FF465A;
+                box-shadow: 0px 0px 25px rgba(255, 70, 90, 0.66);
+                border-radius: 8px;
+                color: #fff;
+                border: none;
+                padding: 5px 25px;
+                font-size: 19px;
+                font-weight: 500;
+            }
+        }
+
+        .navbar-toggler-icon{
+            background-image: url("../../../images/landing/bar_img.png");
+        } 
+    }
+    .navColorChange{
+        backdrop-filter: blur(16px);
+        background-color: #05071042;
+    }
+}
+
+@media screen and (max-width:991px){
+    .navbar {
+        backdrop-filter: blur(16px);
+        background-color: #0c0f23;
+    }  
+}
+
+.termNav{
+    background-color: #0c0f23 !important;
+}
+

@@ -1,0 +1,130 @@
+.user_feature_section {
+    // .user_feature_tabs{
+    //     background: rgb(27 30 43 / 25%);
+    //     backdrop-filter: blur(8px);
+    //     border: solid 1px transparent;
+    //     border-image: linear-gradient(to right, #FFFFFF, #FF465A) 1;
+    //     background-origin: border-box;
+    //     background-clip: content-box, border-box;
+    // }
+    .feature_linear_border {
+        background: linear-gradient(90.37deg, #FFFFFF 0.29%, #FF465A 99.68%);
+        border-radius: 20px;
+        padding: 1px;
+        position: relative;
+        margin-top: -250px;
+
+        .user_feature_tabs {
+            color: #fff;
+            border-radius: 20px;
+            background-color: #050505f0;
+            backdrop-filter: blur(10px);
+
+            .nav-pills {
+                display: flex;
+                justify-content: space-evenly;
+                border-bottom: 2px solid transparent;
+                border-image: linear-gradient(0.01turn, #ff495d, rgb(232 232 232), rgb(219 219 219 / 0%));
+                border-image-slice: 1;
+                padding: 1rem;
+                 
+                .nav-item {
+                    padding: 0.2rem 0rem;
+                    .nav-link {
+                        border: 1px solid rgb(66 66 66 / 93%);
+                        border-radius: 20px;
+                        padding: 4px 33px;
+                        color: #fff;
+                        display: flex;
+                        gap: 8px;
+                        align-items: center;
+                         &:hover{
+                            .dot_div{
+                                opacity: 1;
+                            }
+                         }
+
+                        .dot_div {
+                            background: #EC713C;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+
+            .nav-pills .nav-link.active {
+                color: #040404 !important;
+                background-color: #ffffff;
+                font-weight: 500;
+                 .dot_div{
+                    opacity: 1;
+                 }
+            }
+
+            .user_feature_row {
+                padding: 45px;
+
+                .feature_content {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .para_head {
+                        color: #496FDF;
+                        margin-bottom: 0.3rem;
+                    }
+
+                    .title {
+                        font-size: 30px;
+                    }
+
+                    .para_text {
+                        font-weight: 300;
+                        font-size: 16px;
+                    }
+
+                    .feature_btn {
+                        display: flex;
+                        gap: 13px;
+                        align-items: center;
+                        margin-top: 20px;
+
+                        button {
+                            background-color: #FF465A;
+                            color: #fff;
+                            font-weight: 700;
+                            border: none;
+                            font-size: 17px;
+                            padding: 8px 24px;
+                            border-radius: 8px;
+                        }
+
+                        p {
+                            margin-bottom: 0rem;
+
+                            svg {
+                                background: #ff495d;
+                                border-radius: 21px;
+                                font-size: 20px;
+                                padding: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width:575px) {
+    .user_feature_section .feature_linear_border {
+        margin: -145px 10px 10px 10px;
+    }
+}
+
+

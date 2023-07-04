@@ -1,0 +1,199 @@
+@mixin invoice_status {
+    color: #fff;
+    padding: 3px 7px;
+    border-radius: 3px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    width: 80px;
+}
+
+.new_invoice {
+    background: rgb(10, 179, 156);
+    @include invoice_status;
+}
+
+
+.inProgress_invoice {
+    background: #d2c210;
+    @include invoice_status;
+}
+
+.business_detail_section {
+    padding: 25px 25px;
+
+    .business_detail_tabs {
+        // box-shadow: 0 1px 2px rgba(56, 65, 74, .15);
+        background: #EE5D6D;
+        border-radius: 16px;
+        margin-bottom: 10px;
+        padding: 1rem 1rem;
+
+    }
+
+    .nav-tabs .nav-item {
+        padding: 0px 20px;
+    }
+
+    .nav-tabs .nav-link {
+        font-weight: 500;
+        color: rgb(255 255 255);
+        padding: 8px 0px !important;
+        border-bottom: 2px solid transparent;
+        transition: auto;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+
+        &:hover {
+            border: none;
+            padding: 8px 0px;
+        }
+    }
+
+    .nav-tabs .nav-link.active {
+        color: #fff;
+        font-weight: 500;
+        border-bottom: 2px solid #fff;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding: 8px 0px;
+        background-color: #EE5D6D;
+    }
+
+    .business_detail_form {
+        box-shadow: 0 1px 2px rgba(56, 65, 74, .15);
+        background: #fff;
+        border-radius: 16px; 
+
+        .business_detail_title {
+            border-top: 1px solid #e9ebec;
+            padding: 1rem 1rem 0rem 1rem;
+
+            h6 {
+                font-size: 17px;
+                margin-bottom: 0rem;
+            }
+        }
+
+        .business_detail_inputs {
+            padding: 0.6rem 1rem 1rem 1rem;
+
+            .preview{
+                font-weight: 500;
+                font-size: 15px;
+                color: #525f7f;
+            }
+
+            .inputs {
+                padding: 8px 0px;
+                .preview_attachment{
+                    display: flex;
+                    gap: 10px;
+                    p{
+                        &:hover{
+                            cursor: pointer;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                label {
+                    margin-bottom: 0.5rem;
+                    font-weight: 500;
+                    font-size: 15px;
+                    color: #525f7f;
+
+                    span {
+                        color: #f61515;
+                    }
+                }
+
+                input {
+                    &:focus {
+                        box-shadow: none;
+                        border: 1px solid #ced4da;
+                    }
+                }
+            }
+
+            .submit_btn {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 38px;
+               
+            }
+
+        }
+    }
+
+    .general_document_section {
+        box-shadow: 0 1px 2px rgba(56, 65, 74, .15);
+        background: #fff;
+        border-radius: 5px;
+
+        .general_document_content {
+            border-top: 1px solid #e9ebec;
+            padding: 1rem 1rem 0rem 1rem;
+
+            h6 {
+                font-size: 17px;
+                margin-bottom: 0rem;
+            }
+        }
+
+        .general_document_table {
+            padding: 1rem 0rem;
+
+            .MuiTableContainer-root {
+                border: 1px solid #80808033;
+
+                .MuiTable-root {
+                    thead {
+                        background: #f1f1f1;
+
+                        tr {
+                            .MuiTableCell-head {
+                                font-weight: 600 !important;
+                            }
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 0rem !important;
+                    }
+
+                    .MuiTableCell-root {
+                        border-right: 1px solid #80808033;
+                        padding: 10px;
+
+                        &:nth-last-child(-n+1) {
+                            border-right: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.reject_modal{
+    .form-control{
+        &:focus{
+            box-shadow: none;
+            border: 1px solid #ced4da;
+        }
+    }
+}
+
+
+.back_link{
+    background: #ef5f6f;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px
+}
+.back_link:hover{
+    color: #fff;
+}

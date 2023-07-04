@@ -1,0 +1,148 @@
+.main_header {
+    background: #FDFDFD;
+    border-bottom: 0.3px solid rgb(211 211 211 / 72%);
+    padding: 23px 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+
+    .header_content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .header_title {
+            color: #FF465A;
+
+            h4 {
+                margin: 0;
+
+                @media screen and (max-width: 525px) {
+                    display: none;
+                }
+            }
+        }
+
+        .header_right_content {
+            display: flex;
+            align-items: center;
+
+            .notifications {
+                .icon {
+                    svg {
+                        font-size: 2rem;
+                        margin-right: 15px;
+                        color: #F87E8C;
+                    }
+                }
+            }
+
+            .connect_wallet_btn {
+                .primary_btn {
+                    width: auto;
+                    margin-right: 20px;
+                    padding: 0.5em 1.5em;
+                }
+            }
+
+            .header_profile_section {
+                position: relative;
+
+                .header_profile {
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    background: #EDEDED;
+                    box-shadow: 0px 1.17391px 2.34783px rgba(56, 65, 74, 0.15);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 600;
+                    font-size: 1.4em;
+                    color: #962F2F;
+                    cursor: pointer;
+                    text-transform: uppercase;
+
+                }
+
+                .profile_dropdown {
+                    position: absolute;
+                    background-color: #fff;
+                    width: 170px;
+                    inset: 0px 0px auto auto;
+                    margin: 0px;
+                    // transform: translate(0px, 65px);
+                    box-shadow: 0 5px 10px rgba(30, 32, 37, .12);
+                    line-height: 2;
+                    padding: 1em 0em;
+                    border: 1px solid #d4d4d49e;
+                    z-index: 999;
+                    top: 64px;
+                    right: -20px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(-20px);
+                    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+
+                    p {
+                        margin-bottom: 0rem;
+                        color: #212529;
+                        font-size: 15px;
+                        padding: 0.2em 1.5em;
+                        cursor: pointer;
+                        width: 100%;
+
+                        a {
+                            color: #212529;
+                            width: 100%;
+                        }
+
+                        &:hover {
+                            background-color: #f3f6f9;
+                            color: #000;
+                        }
+
+                        svg {
+                            font-size: 17px;
+                            margin-right: 5px;
+                            color: #212529;
+                        }
+                    }
+                }
+
+                .active {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+            }
+
+        }
+
+    }
+}
+
+//========== block account modal css ========//
+
+.block_account_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     .icon{
+        font-size: 4.5rem;
+        color: #f8bb86;
+        padding-bottom: 1.4rem;
+     }
+     h4{
+        font-size: 1.775em;
+        font-weight: 500;
+        color: #555555d6;
+        padding-bottom: 20px;
+     }
+}
+
+//========== block account modal css ========//

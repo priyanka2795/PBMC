@@ -1,0 +1,263 @@
+@mixin box_bg($background) {
+    background-color: $background;
+    padding: 1em 2em;
+    border-radius: 15px;
+    // box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: 0px 1px 2px 0px #38414A26;
+}
+
+@mixin inner_box($borderColor) {
+    border: 2px solid $borderColor;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 15px;
+}
+
+.dashboard__home {
+    .row>div {
+        padding: 0 1.5em;
+    }
+
+    .welcome__banner {
+        @include box_bg(#ef5f6f);
+        margin: 1em 0;
+        height: 70px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        h3 {
+            color: #fff;
+            font-size: 1.35em;
+            margin: 0%;
+            font-family: 'Roboto', sans-serif;
+             span{
+                text-transform: capitalize;
+             }
+        }
+    }
+
+    .head {
+        text-align: center;
+        margin: 1em 0;
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    .financial__health {
+        @include box_bg(#fff);
+        overflow: hidden;
+
+        h5 {
+            font-weight: 400;
+            font-size: 1em;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: space-around;
+            margin: 1em;
+            align-items: stretch;
+            flex-wrap: wrap;
+
+            .part3 {
+                border-left: 1px solid rgba(0, 0, 0, 0.2);
+                border-right: 1px solid rgba(0, 0, 0, 0.2);
+                padding: 0 4em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                p {
+                    margin: 0%;
+                    font-size: 12px;
+                    color: #6E757C;
+                }
+
+                h3 {
+                    margin: 0%;
+                    color: #6E757C;
+                    font-weight: 600;
+                    font-size: 25px;
+                }
+            }
+
+            .part4 {
+                padding: 0 4em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                p {
+                    margin: 0%;
+                    font-size: 12px;
+                    color: #6E757C;
+                }
+
+                h3 {
+                    margin: 0%;
+                    color: #6E757C;
+                    font-weight: 600;
+                    font-size: 25px;
+                }
+            }
+        }
+
+
+        .meter1, .meter2 {
+            width: 200px;
+            height: 200px;
+            // background-image: conic-gradient(#f02c35 0deg, #f02c35 30deg, #fcaa35 30deg, #fcaa35 60deg, #e6eb3b 60deg, #e6eb3b 90deg, #cce23d 90deg, #cce23d 120deg, #90cd3c 120deg, #90cd3c 150deg, #4abc46 150deg, #4abc46 180deg, #fff 180deg, #fff 360deg);
+            background-image: conic-gradient(#ffb430 0deg, #ffb430 100deg, #d9d9d9 100deg, #d9d9d9 180deg, #fff 180deg, #fff 360deg);
+            border-radius: 50%;
+            transform: rotate(270deg);
+            position: relative;
+            margin-bottom: -4em;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #fff;
+                width: 70%;
+                height: 70%;
+                border-radius: 50%
+            }
+
+            .start {
+                position: absolute;
+                top: 2%;
+                left: 40%;
+                transform: rotate(90deg);
+                color: #4e5d6c;
+                font-size: 12px;
+                height: fit-content;
+            }
+
+            .end {
+                position: absolute;
+                top: 87%;
+                left: 36%;
+                transform: rotate(90deg);
+                color: #4e5d6c;
+                font-size: 12px;
+                height: fit-content;
+            }
+
+            .current-value {
+                position: absolute;
+                top: 45%;
+                left: 30%;
+                transform: rotate(90deg);
+                color: #4e5d6c;
+                font-size: 15px;
+                font-weight: 600;
+                height: fit-content;
+            }
+
+            img {
+                width: 11px;
+                transform: rotate(100deg) translateY(-36px) translateX(0px);
+                position: absolute;
+                top: 64px;
+                right: 47%;
+                transform-origin: center;
+                user-select: none;
+            }
+
+
+            .indicator {
+                width: 5px;
+                height: 100px;
+                background-color: rgba(56, 58, 71, 0.829);
+                border-radius: 50% 50% 0 0;
+                position: absolute;
+                right: 50%;
+                transform: rotate(81deg);
+                transform-origin: bottom;
+            }
+        }
+
+        .meter2{
+            background-image: conic-gradient(#ff4b4e 0deg, #ff4b4e 100deg, #d9d9d9 100deg, #d9d9d9 180deg, #fff 180deg, #fff 360deg);
+        }
+    }
+
+    .available_fund_box {
+        @include box_bg(#fff);
+
+        .available_fund_val {
+            margin-top: 2em;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            h2 {
+                font-weight: 700;
+                font-size: 44px;
+                margin: 0;
+            }
+
+            span {
+                font-size: 14px;
+            }
+        }
+
+        .breakdown {
+            margin-top: 2em;
+        }
+
+        h5 {
+            text-align: start;
+            font-weight: 400;
+            font-size: 1em;
+        }
+
+        .inner_box {
+
+            .wrapper {
+                display: flex;
+                justify-content: space-between;
+                line-height: 1.8;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .invoices_box {
+        @include box_bg(#fff);
+
+        h5 {
+            font-weight: 400;
+            font-size: 1em;
+        }
+
+        .all_invoice,
+        .early_payment {
+            @include inner_box(#CACACA);
+
+            .all_invoices {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .total_value {
+                display: flex;
+                justify-content: space-between
+            }
+        }
+    }
+
+    .chat_info_box {
+        @include box_bg(#fff);
+
+        .message {
+            @include inner_box(#000);
+            background-color: #efefef;
+        }
+    }
+}

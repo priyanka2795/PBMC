@@ -1,0 +1,262 @@
+.invoice_submission_section {
+    padding: 25px 25px;
+
+    .invoice_detail_form {
+        box-shadow: 0 1px 2px rgba(56, 65, 74, .15);
+        background: #fff;
+        border-radius: 16px;
+        margin-bottom: 10px;
+        padding: 1rem 0rem;
+
+        .invoice_submission_title {
+            padding: 0rem 1rem 0rem 1rem;
+        }
+
+        .invoice_detail_title {
+            border-top: 1px solid #e9ebec;
+            padding: 1rem 1rem 0rem 1rem;
+
+            h6 {
+                font-size: 17px;
+                margin-bottom: 0rem;
+            }
+        }
+
+        .inovice_detail_inputs {
+            padding: 0.6rem 1rem 1rem 1rem;
+
+            .inputs {
+                padding: 8px 0px;
+
+                label {
+                    margin-bottom: 0.5rem;
+                    font-weight: 500;
+                    font-size: 15px;
+                    color: #525f7f;
+
+                    span {
+                        color: #f61515;
+                    }
+                }
+
+                input {
+                    &:focus {
+                        box-shadow: none;
+                        border: 1px solid #ced4da;
+                        // box-shadow: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
+                        // border: 0;
+                    }
+                }
+
+                .invoice_select_input {
+                    display: flex;
+                    gap: 5px;
+                    background: #fff;
+                    border: 1px solid #ced4da;
+                    border-radius: 0.375rem;
+
+                    select {
+                        padding-left: 5px;
+                        font-size: 16px;
+                        font-weight: 400;
+                        border: none;
+                        background: transparent;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                    input {
+                        border: none;
+                        border-left: 1px solid #ced4da;
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+
+                    }
+                }
+            }
+
+
+            .submit_btn {
+                height: 200px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+
+
+
+        }
+
+        .add_more_details_div {
+            p {
+                padding-left: 17px;
+                font-weight: 400;
+                color: #00a1ff;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .file_upload_div {
+            border: 2px dashed #6a6b6e;
+            border-radius: 4px;
+            height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .file_upload_content {
+                .icon {
+                    text-align: center;
+                    font-size: 34px;
+                    color: #373739;
+                }
+            }
+
+            .file_upload_input {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+
+        .preview_img_div {
+            height: 280px;
+            width: 100%;
+            background-color: #f9f9f9;
+            position: relative;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                height: 200px;
+                width: 100%;
+                object-fit: contain;
+                border-radius: 4px;
+                display: block;
+                margin: auto;
+                cursor: pointer;
+            }
+
+            .close_preview {
+                position: absolute;
+                top: -8px;
+                right: -8px;
+                background: #f34c5c;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-size: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.proceed_modal {
+    .modal-body {
+        .close_btn {
+            text-align: right;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .proceed_btns {
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .primary_btn {
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+
+.payment_success_msg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .success_icon {
+        font-size: 5rem;
+        color: green;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+.payment_error_msg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .error_icon {
+        font-size: 5rem;
+        color: rgb(186, 16, 16);
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+.search_dropdown {
+    cursor: pointer;
+
+    .MuiOutlinedInput-root {
+        padding: 1px !important;
+    }
+
+    input {
+        cursor: pointer;
+    }
+}
+
+.modal {
+    .cancel_payment {
+        text-align: center;
+        padding-top: 21px;
+        color: #086bfbd9;
+        font-size: 15px;
+        cursor: pointer;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .checkout_from {
+        position: relative;
+
+        .freez_bg {
+            position: absolute;
+            background: #f8f9fa70;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
